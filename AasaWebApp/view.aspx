@@ -78,9 +78,10 @@
             <asp:Label ID="DetailLabel" runat="server" Text='<%# Bind("Detail") %>' />
             <br />
             &nbsp;<asp:Image ID="Image1" CssClass="image-size" runat="server" ImageUrl='<%# Eval("Image1") %>' />
-            <br />
-            <asp:Image ID="Image2" runat="server" ImageUrl='<%# Eval("Image2") %>' />
-&nbsp;<br />&nbsp;<asp:Image ID="Image3" runat="server" ImageUrl='<%# Eval("Image3") %>' />
+            
+            <asp:Image ID="Image2" runat="server" CssClass="image-size" ImageUrl='<%# Eval("Image2") %>' />
+&nbsp;
+            &nbsp;<asp:Image ID="Image3" runat="server" CssClass="image-size" ImageUrl='<%# Eval("Image3") %>' />
             <br />
             <strong>MRP:</strong>
             <asp:Label ID="MRPLabel" runat="server" Text='<%# Bind("MRP") %>' />

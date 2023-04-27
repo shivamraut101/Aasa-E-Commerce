@@ -1,0 +1,7 @@
+﻿body {
+    background: rgb(0,0,36);
+    background: linear-gradient(90deg, rgba(0,0,36,1) 0%, rgba(182,0,187,1) 0%, rgba(94,1,180,1) 100%);
+}
+#FormView1 {
+    border: 2px solid black;
+}

@@ -1,0 +1,54 @@
+﻿body {
+    background: rgb(0,0,36);
+    background: linear-gradient(90deg, rgba(0,0,36,1) 0%, rgba(207,0,91,1) 0%, rgba(121,1,181,1) 100%, rgba(1,180,25,1) 100%);
+}
+
+.container-fluid {
+    padding-left: 20px;
+}
+
+.card {
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card-container {
+    padding-bottom: 25px;
+}
+
+#aud {
+    margin-bottom: 40px;
+}
+
+#upload{
+    padding: 2px;
+    display:flex;
+    margin: 5px;
+}
+
+.file {
+    margin-left: 5px;
+}
+
+#BTH {
+    background-color: #ff7417;
+    border-radius: 20px;
+    width: 250px;
+    border: none;
+    height: 35px;
+    margin-left: 2px;
+}
+
+#backToHome {
+    text-decoration: none;
+    color: white;
+}
+
+input {
+    border: purple;
+}
+
+.btn-lg {
+    background-color: purple:
+}

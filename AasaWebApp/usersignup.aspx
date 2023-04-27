@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="usersignup.aspx.cs" Inherits="AasaWebApp.usersignup" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="customcss/usersignup.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
@@ -169,7 +170,7 @@
                         </div>
 
                     </div>
-                    <a href="homepage.aspx" style="text-decoration: none"><< Back to Home</a>
+                    <button id="bth"><a id="yopete" href="homepage.aspx" style="text-decoration: none">👈 Back to Home</a></button>
                 </div>
                 <br />
 

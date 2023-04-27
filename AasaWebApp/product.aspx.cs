@@ -17,20 +17,20 @@ namespace AasaWebApp
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                string SessionID = Session["user_id"]?.ToString();
-                if (SessionID != null)
-                {
-                    // Code For - If User is Successfully Loged In Then 
-                    GridView1.DataBind();
-                }
-                else
-                {
-                    Response.Redirect("homepage.aspx");
+            //if (!IsPostBack)
+            //{
+            //    string SessionID = Session["user_id"]?.ToString();
+            //    if (SessionID != null)
+            //    {
+            //        // Code For - If User is Successfully Loged In Then 
+            //        GridView1.DataBind();
+            //    }
+            //    else
+            //    {
+            //        Response.Redirect("homepage.aspx");
 
-                }
-            }
+            //    }
+            //}
             
         }
 

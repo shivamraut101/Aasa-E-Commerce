@@ -1,0 +1,48 @@
+﻿body {
+    background-image: url("https://wallpapercave.com/wp/wp3236572.jpg");
+    background-size: cover;
+}
+
+.card{
+    border-radius: 10px;
+    background-color: ;
+}
+
+.btn-success {
+    margin-top: 10px;
+    width: 310px;
+    background-color: lawngreen;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+#Button2 {
+    margin-top: 10px;
+    width: 310px;
+    background-color: purple;
+    border: none;
+    border-radius: 20px;
+}
+
+#TextBox2 {
+    border: 2px solid purple;
+    width: 310px;
+    height: 100px;
+    background-color: red;
+}
+
+#BTH {
+    background-color: #ff7417;
+    width: 250px;
+    border: none;
+    height: 35px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+}
+
+#backToHome {
+    text-decoration: none;
+    color: white;   
+}

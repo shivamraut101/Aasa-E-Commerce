@@ -16,6 +16,23 @@ namespace AasaWebApp
         protected void Page_Load(object sender, EventArgs e)
         {
             
+                
+            if (!IsPostBack)
+            {
+                // Retrieve data from database
+                string connectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("SELECT * FROM product_tbl", connection);
+                    SqlDataReader reader = command.ExecuteReader();
+                    rptSlides.DataSource = reader;
+                    rptSlides.DataBind();
+                    reader.Close();
+                }
+            }
+      
+
         }
 
         protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -191,10 +208,19 @@ namespace AasaWebApp
 
                 Response.Redirect("view.aspx?ID=" + productId);
             }
+
+            
         }
-        
 
+        protected void rptSlides_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "View")
+            {
+                int productId = Convert.ToInt32(e.CommandArgument);
 
+                Response.Redirect("view.aspx?ID=" + productId);
+            }
+        }
     }
 
 

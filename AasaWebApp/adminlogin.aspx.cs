@@ -14,20 +14,20 @@ namespace AasaWebApp
         string stcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                string SessionID = Session["admin"]?.ToString();
-                if (SessionID != null)
-                {
-                    // Code For - If User is Successfully Loged In Then 
+            //if (!IsPostBack)
+            //{
+            //    string SessionID = Session["admin"]?.ToString();
+            //    if (SessionID != null)
+            //    {
+            //        // Code For - If User is Successfully Loged In Then 
                     
-                }
-                else
-                {
-                    Response.Redirect("homepage.aspx");
+            //    }
+            //    else
+            //    {
+            //        Response.Redirect("homepage.aspx");
 
-                }
-            }
+            //    }
+            //}
         }
 
         protected void Button1_Click(object sender, EventArgs e)

@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="contribute.aspx.cs" Inherits="AasaWebApp.contribute" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<link href="customcss/contribute.css" rel="stylesheet" />
      <script type="text/javascript">
-        $(document).ready(function () {
-            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
-        });
+         $(document).ready(function () {
+             $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+         });
      </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -33,10 +34,14 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col">
+                            <div class="col" id="upload">
+                                <div class="file">
                                 <asp:FileUpload onchange="readURL(this);" class="form-control" ID="FileUpload1" runat="server" />
-                                <asp:FileUpload onchange="readURL(this);" class="form-control" ID="FileUpload2" runat="server" />
-                                <asp:FileUpload onchange="readURL(this);" class="form-control" ID="FileUpload3" runat="server" />
+                                    </div>
+                                 <div class="file">
+                                <asp:FileUpload onchange="readURL(this);" class="form-control" ID="FileUpload2" runat="server" /></div>
+                                 <div class="file">
+                                <asp:FileUpload onchange="readURL(this);" class="form-control" ID="FileUpload3" runat="server" /></div>
                             </div>
                         </div>
                         <div class="row">
@@ -119,7 +124,7 @@
                             <div class="col-12">
                                 <label>Product Description</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Book Description" TextMode="MultiLine" Rows="2"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Product Description" TextMode="MultiLine" Rows="2"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -139,17 +144,17 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-4">
-                            <asp:Button ID="Button1" class="btn btn-lg btn-block btn-success" runat="server" Text="Add" OnClick="Button1_Click" />
+                        <div class="col-4" id="aud">
+                            <asp:Button ID="Button1" class="btn btn-lg btn-block btn-success" runat="server" Text="➕ Add" OnClick="Button1_Click" />
                         </div>
                         <div class="col-4">
-                            <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Update" OnClick="Button3_Click" />
+                            <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="🔃 Update" OnClick="Button3_Click" />
                         </div>
                         <div class="col-4">
-                            <asp:Button ID="Button2" class="btn btn-lg btn-block btn-danger" runat="server" Text="Delete" OnClick="Button2_Click" />
+                            <asp:Button ID="Button2" class="btn btn-lg btn-block btn-danger" runat="server" Text="🚫 Delete" OnClick="Button2_Click" />
                         </div>
                     </div>
-                    <a href="homepage.aspx"><< Back to Home</a><br>
+                    <button id="BTH"><a href="homepage.aspx"  id="backToHome">👈 Back to Home</a></button><br>
                     <br>
                 </div>
 
